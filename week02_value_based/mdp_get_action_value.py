@@ -15,5 +15,5 @@ def get_action_value(mdp, state_values, state, action, gamma):
         reward = mdp.get_reward(state, action, s_prime)
         trans_prob = mdp.get_transition_prob(state, action, s_prime)
         value_prime = state_values[s_prime]
-        q_sa += trans_prob * (reward+(gamma*value_prime))
+        q_sa += trans_prob * (reward + (gamma * value_prime))
     return q_sa
