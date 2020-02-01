@@ -2,10 +2,6 @@
 def get_action_value(mdp, state_values, state, action, gamma):
     """ Computes Q(s,a) as in formula above """
     
-    # Initialize MDP
-    mdp.reset()
-    mdp.step(action)
-    
     # Get next state
     next_states = mdp.get_next_states(state, action)
     
